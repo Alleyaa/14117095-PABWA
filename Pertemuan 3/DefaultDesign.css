@@ -1,0 +1,85 @@
+@font-face {
+    font-family: lettering;
+    src: url("Senoritta.ttf");
+}
+@font-face {
+    font-family: lettering2;
+    src: url("Monterchi-Sans-Book-trial.ttf");
+}
+body {
+    font-family: 'Courier New';
+    background-image: url("road.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+header {
+	background-color: antiquewhite;
+	height :10%;
+	font-family: lettering;
+	font-size:50px;
+	color:dimgray;
+    text-align:center;
+    padding:25px;
+    margin-left:40px;
+    margin-right:40px;
+}
+section {
+    height:auto;
+}
+article {
+    background-color: rgba(255,255,255,0.6);
+    margin-left: 40px;
+    margin-right:40px;
+    margin-top:20px;
+    margin-bottom:20px;
+    padding-top: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 20px;
+    text-align: justify;
+    font-family: lettering2;
+}
+p{
+    font-size:14pt;
+}
+h1{
+    font-size:24pt;
+}
+footer {
+    background-color: burlywood;
+    margin-left: 40px;
+    margin-right: 40px;
+    text-align: center;
+    padding: 15px;
+}
+h4 {
+    font-family: lettering;
+    font-size: 10pt;
+    color: dimgray;
+}
+.navigator {
+    overflow: hidden;
+    background-color: #333;
+}
+
+.navigator a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 19px ;
+    text-decoration: none;
+}
+
+.navigator a:hover {
+    background-color: #ddd;
+    color: black;
+}
+nav {
+    text-align: center;
+    position: relative;
+    margin-left: 40px;
+    margin-right: 40px;
+    width:auto;
+}
