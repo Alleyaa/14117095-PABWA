@@ -1,70 +1,17 @@
-<html>
-    <head>
-        <title>Form Keren</title>
-    </head>
-    <body>
-        <form action="Latihan2.php" method="GET">
-          <label>Nama : </label>
-          <input type="text" name="name"><br>
-
-          <label>Warna : </label>
-          <input type="text" name="warna"><br>
-          
-          <input type="submit" value="kirim">
-      </form>
-
-      <?php
-      $nama=  $_GET["name"];
-      $warna= $_GET["warna"];
-  
-      $panjang = strlen($nama);
-      $total=0;
-      if($panjang >= 1 && $panjang <= 10){
-          $total=$panjang*300;
-          if($warna == "biru"){
-             echo"Harga : <div style='color: blue'>$total </br>
-             String : $nama </div> </br>";
-          }elseif($warna == "kuning"){
-              echo"Harga :<div style='color:yellow'>$total  </br>
-              String : $nama  </div> </br>";
-          }elseif($warna == "hijau"){
-              echo"Harga : <div style='color:green'>$total  </br>
-              String : $nama  </div> </br>";
-          }elseif($warna == ""){
-              echo"Harga :<div style='color:red'> $total  </br>
-              String : $nama </div> </br>";
-          }
-      }elseif($panjang >= 11 && $panjang <= 20){
-          $total=$panjang*500;
-          if($warna == "biru"){
-              echo"Harga : <div style='color: blue'>$total  </br>
-              String : $nama </div> </br>";
-          }elseif($warna == "kuning"){
-              echo"Harga : <div style='color:yellow'>$total  </br>
-              String : $nama </div> </br>";
-          }elseif($warna == "hijau"){
-              echo"Harga : <div style='color:green'>$total  </br>
-              String : $nama  </div> </br>";
-          }elseif($warna == ""){
-              echo"Harga :<div style='color:red'> $total  </br>
-              String : $nama </div> </br>";
-          }
-      }elseif($panjang > 20){
-          $total=$panjang*700;
-          if($warna == "biru"){
-              echo"Harga :<div style='color: blue'>$total  </br>
-              String : $nama </div> </br>";
-          }elseif($warna == "kuning"){
-              echo"Harga : <div style='color:yellow'>$total  </br>
-              String : $nama </div> </br>";
-          }elseif($warna == "hijau"){
-              echo"Harga : <div style='color:green'>$total  </br>
-              String : $nama </div> </br>";
-          }elseif($warna == ""){
-              echo"Harga :<div style='color:red'> $total  </br>
-              String : $nama </div> </br>";
-          }
+<HTML>
+  <HEAD>
+    <title>Koneksi Database MySQL</title>
+  </HEAD>
+  <BODY>
+    <h1>Koneksi database dengan mysql_fetch_array</h1>
+    <?php
+      $conn=mysqli_connect ('localhost','root','','mouse') or die ("koneksi gagal");
+      $hasil = mysqli_query($conn,"SELECT * from liga");
+      while ($row=mysqli_fetch_array($hasil)) {
+        echo "Liga " .$row['negara']; //array asosiatif
+        echo " mempunyai " .$row[2]; //array numeris
+        echo " wakil di liga champion <br>";
       }
-      ?>
-    </body>
-</html>
+    ?>
+  </BODY>
+</HTML>
